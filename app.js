@@ -107,3 +107,17 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+
+//le routes e le query sono le cose più importanti
+
+/*https://expressjs.com/it/guide/routing.html 
+
+https://expressjs.com/it/starter/basic-routing.html 
+
+https://www.sqlitetutorial.net/sqlite-insert/ 
+
+https://www.sqlitetutorial.net/sqlite-nodejs/insert/ 
+
+https://www.sqlitetutorial.net/sqlite-nodejs/delete/ 
+*/
