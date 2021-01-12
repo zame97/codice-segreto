@@ -1,0 +1,26 @@
+<%- include('header', {title, active: 'exams'}); -%>
+
+<main class="container-fluid mt-3">
+    <div class="row">
+        <div class="col-8 mx-auto">
+          <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Data</th>
+                    <th>Episodio</th>
+                    <th>Descrizione</th>
+                    <th>Sponsor</th>
+                    <th>Prezzo</th>
+                </tr>
+            </thead>
+            <tbody>
+              <% exams.forEach((exam) => { %>
+                <%- include('exam-partial', {exam}); -%>
+              <% }); %>
+            </tbody>
+        </table>
+        </div>
+    </div>
+</main>
+
+<%- include('footer'); -%>
