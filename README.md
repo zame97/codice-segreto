@@ -3,8 +3,8 @@ Repository che serve solo a salvare le mie cose.
 
 ## installare le dipendenze npm
 ```sh
-$ npm install -g nodemon
 $ npm init
+$ npm install -g nodemon
 $ npm install express
 $ npm install sqlite3
 $ npm install morgan
