@@ -1,4 +1,4 @@
-<%- include('header', {title, active: 'exams'}); -%>
+<%- include('header', {title, active: 'episodio'}); -%>
 
 <main class="container-fluid mt-3">
     <div class="row">
@@ -6,16 +6,17 @@
           <table class="table">
             <thead class="thead-light">
                 <tr>
-                    <th>Data</th>
+                    <th>Audio</th>
                     <th>Episodio</th>
                     <th>Descrizione</th>
+                    <th>Data</th>
                     <th>Sponsor</th>
                     <th>Prezzo</th>
                 </tr>
             </thead>
             <tbody>
-              <% exams.forEach((exam) => { %>
-                <%- include('exam-partial', {exam}); -%>
+              <% episodio.forEach((episodi) => { %>
+                <%- include('episodio-partial', {episodi}); -%>
               <% }); %>
             </tbody>
         </table>

@@ -1,18 +1,17 @@
-/*
-
 'use strict';
 
-const dao = require('../models/exam-dao.js');
+const dao = require('../models/episodio-dao.js');
 const express = require('express');
 const router = express.Router();
 
-/* GET exams page */
 
-/*
+/* GET course (home) page */
 router.get('/', function(req, res, next) {
-  dao.getAllExams(req.user.id)
-  .then((exams) => res.render('exams', {title: 'Exams', exams }));
+  console.log(req);
+  dao.getAllEpisodio()
+  .then((episodio) => {
+    res.render('episodio', {title: 'Episodio', episodio});
+  });
 });
 
 module.exports = router;
-*/

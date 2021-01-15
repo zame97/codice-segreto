@@ -12,8 +12,9 @@ const session = require('express-session');
 const userDao = require('./models/user-dao.js');
 
 const serieRouter = require('./routes/serie');
-const episodiRouter = require('./routes/sessions');
+const sessionRouter = require('./routes/sessions');
 const registrazione = require('./routes/registrazione');
+const episodiRouter = require('./routes/episodi');
 
 const app = express();
 
@@ -83,8 +84,10 @@ app.use(function (req, res, next) {
 });
 
 
-app.use('/', episodiRouter);
+app.use('/', sessionRouter);
 app.use('/', isLoggedIn, serieRouter);
+app.use('/episodi', episodiRouter);
+
 
 app.use('/registrazione', registrazione);
 //app.use('/exams', isLoggedIn, examsRouter);
