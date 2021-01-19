@@ -97,6 +97,11 @@ app.use('/', function(req, res, next) {
 });
 
 
+app.get('./views/header/search?', (req, res) => {
+  console.log(req.query);
+  res.redirect('/');
+})
+
 
 // error handler
 app.use(function(err, req, res, next) {
